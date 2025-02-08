@@ -38,6 +38,7 @@ def webServer(port=13331):
       #Content-Type is an example on how to send a header as bytes. There are more!
       content_type = "Content-Type: text/html; charset=UTF-8\r\n"
       content_length = "Content-Length: " + str(f.__sizeof__()) + "\r\n"
+      connection= "Connection: close\r\n"
       cache_control = "Cache-Control: no-cache, no-store, must-revalidate\r\n"
       pragma = "Pragma: no-cache\r\n"
       expire = "Expires: 0\r\n"      
@@ -52,6 +53,7 @@ def webServer(port=13331):
             header +
             content_type +
             content_length +
+            connection +
             cache_control +
             pragma +
             expire +
@@ -91,6 +93,7 @@ def webServer(port=13331):
         #Content-Type is an example on how to send a header as bytes. There are more!
         content_type = "Content-Type: text/html; charset=UTF-8\r\n"
         content_length = "Content-Length: 0\r\n"
+        connection= "Connection: close\r\n"
         cache_control = "Cache-Control: no-cache, no-store, must-revalidate\r\n"
         pragma = "Pragma: no-cache\r\n"
         expire = "Expires: 0\r\n"      
@@ -105,6 +108,7 @@ def webServer(port=13331):
             header +
             content_type +
             content_length +
+            connection +
             cache_control +
             pragma +
             expire +
